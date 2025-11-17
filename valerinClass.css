@@ -1,0 +1,163 @@
+.table {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  width: 200px;
+}
+
+.calendar-month {
+  width: 100%;
+}
+
+.calendar-month table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.calendar-month th, 
+.calendar-month td {
+  border: 1px solid #ddd;
+  padding: 5px;
+  text-align: center;
+}
+
+.calendar-month caption {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.weekend {
+color: red !important;
+}
+
+/* Или более специфичные селекторы */
+.calendar-month th.weekend,
+.calendar-month td.weekend {
+color: red;
+}
+.navbar {
+background-color: #d8aaf3;
+padding: 10px 0;
+}
+
+.nav-list {
+display: flex;
+list-style: none;
+margin: 0;
+padding: 0;
+gap: 20px;
+justify-content: center; /* или flex-start для выравнивания слева */
+}
+
+.nav-list a {
+text-decoration: none;
+color: #333;
+padding: 8px 16px;
+border-radius: 4px;
+transition: background-color 0.3s;
+}
+
+.nav-list a:hover {
+background-color: #39f581;
+}
+
+.main-container {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 20px;
+}
+
+.students-list {
+  flex: 1;
+  max-width: 400px;
+  font-size: 20px;
+}
+
+.checkboxes-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  flex: 1;
+  max-width: 200px;
+}
+
+.checkbox {
+  font-size: 20px;
+  padding: 0px;
+}
+
+.navbar {
+  margin-bottom: 20px;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  padding: 0;
+  justify-content: center;
+}
+
+/* Для красивого отображения */
+ol {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+li {
+  padding: 5px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.student-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 8px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.student-number {
+  min-width: 25px;
+  font-weight: bold;
+}
+
+.student-name {
+  flex: 1;
+}
+
+.checkbox {
+  font-size: 24px;
+  min-width: 30px;
+  text-align: center;
+}
+
+.students-list {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.navbar {
+  margin-bottom: 20px;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  padding: 0;
+  justify-content: center;
+}
+
+ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}

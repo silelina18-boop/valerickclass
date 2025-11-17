@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="checks.css">
+  <title>Просмотр чеков</title>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Система просмотра чеков</h1>
+      <p class="subtitle">Удобный просмотр финансовых документов</p>
+    </header>
+    
+    <nav>
+      <ul>
+        <li><a href="index.html" target="_blank">Список учеников</a></li>
+        <li><a href="spending.html" target="_blank">Расходы бюджета</a></li>
+        <li><a href="calendar.html" target="_blank">Календарь</a></li>
+        <li><a href="calculations.html" target="_blank">Подсчеты</a></li>
+      </ul>
+    </nav>
+    
+    <div class="content">
+      <div class="instructions">
+        <h2>Как просмотреть чек в оригинальном размере</h2>
+        <p>Наведите курсор на миниатюру чека, чтобы увидеть его увеличенную версию. Для закрытия увеличенного изображения нажмите на крестик в правом верхнем углу.</p>
+      </div>
+      
+      <div class="checks-container">
+        <div class="check-item" onclick="openModal('../public/images/чек1.jpg')">
+          <img src="../public/images/чек1.jpg" alt="Чек 1" class="thumbnail">
+          <p class="check-name">Чек №1</p>
+        </div>
+        
+        <div class="check-item" onclick="openModal('../public/images/чек2.jpg')">
+          <img src="../public/images/чек2.jpg" alt="Чек 2" class="thumbnail">
+          <p class="check-name">Чек №2</p>
+        </div>
+        
+        <div class="check-item" onclick="openModal('../public/images/чек3.jpg')">
+          <img src="../public/images/чек3.jpg" alt="Чек 3" class="thumbnail">
+          <p class="check-name">Чек №3</p>
+        </div>
+        <div class="check-item" onclick="openModal('../public/images/чек4.jpg')">
+          <img src="../public/images/чек4.jpg" alt="Чек 4" class="thumbnail">
+          <p class="check-name">Чек №4</p>
+        </div>
+        <div class="check-item" onclick="openModal('../public/images/чек5.jpg')">
+          <img src="../public/images/чек5.jpg" alt="Чек 5" class="thumbnail">
+          <p class="check-name">Чек №5</p>
+        </div>
+        <div class="check-item" onclick="openModal('../public/images/чек6.jpg')">
+          <img src="../public/images/чек6.jpg" alt="Чек 6" class="thumbnail">
+          <p class="check-name">Чек №6</p>
+        </div>
+        <div class="check-item" onclick="openModal('../public/images/чек7.jpg')">
+          <img src="../public/images/чек7.jpg" alt="Чек 7" class="thumbnail">
+          <p class="check-name">Чек №7</p>
+        </div>
+        <div class="check-item" onclick="openModal('../public/images/чек8.jpg')">
+          <img src="../public/images/чек8.jpg" alt="Чек 8" class="thumbnail">
+          <p class="check-name">Чек №8</p>
+        </div>
+        <div class="check-item" onclick="openModal('../public/images/чек9.jpg')">
+          <img src="../public/images/чек9.jpg" alt="Чек 9" class="thumbnail">
+          <p class="check-name">Чек №9</p>
+        </div>
+        <div class="check-item" onclick="openModal('../public/images/чек10.jpg')">
+          <img src="../public/images/чек10.jpg" alt="Чек 10" class="thumbnail">
+          <p class="check-name">Чек №3</p>
+        </div>
+        <div class="check-item" onclick="openModal('../public/images/чек11.jpg')">
+          <img src="../public/images/чек11.jpg" alt="Чек 11" class="thumbnail">
+          <p class="check-name">Чек №11</p>
+        </div>
+        <div class="check-item" onclick="openModal('../public/images/чек12.jpg')">
+          <img src="../public/images/чек12.jpg" alt="Чек 12" class="thumbnail">
+          <p class="check-name">Чек №12</p>
+        </div>
+        <div class="check-item" onclick="openModal('../public/images/чек13.jpg')">
+          <img src="../public/images/чек13.jpg" alt="Чек 13" class="thumbnail">
+          <p class="check-name">Чек №13</p>
+        </div>
+      </div>
+    </div>
+    
+    <footer>
+      <p>© 2023 Система учета расходов. Все права защищены.</p>
+    </footer>
+  </div>
+  
+  <div class="modal" id="imageModal">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <img class="modal-content" id="modalImage" src="" alt="Увеличенный чек">
+  </div>
+
+  <script>
+    function openModal(imageSrc) {
+      const modal = document.getElementById('imageModal');
+      const modalImage = document.getElementById('modalImage');
+      
+      modalImage.src = imageSrc;
+      modal.classList.add('active');
+      
+      // Закрытие модального окна при клике вне изображения
+      modal.addEventListener('click', function(event) {
+        if (event.target === modal) {
+          closeModal();
+        }
+      });
+    }
+    
+    function closeModal() {
+      const modal = document.getElementById('imageModal');
+      modal.classList.remove('active');
+    }
+    
+    // Закрытие модального окна при нажатии клавиши Escape
+    document.addEventListener('keydown', function(event) {
+      if (event.key === 'Escape') {
+        closeModal();
+      }
+    });
+  </script>
+</body>
+</html>

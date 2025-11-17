@@ -1,0 +1,103 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+th, td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: right;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: 'Times New Roman', Times, sans-serif;
+}
+th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+.table-title {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+nav {
+  background-color: #3b5671;
+  padding: 15px;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  flex-wrap: wrap;
+}
+
+nav li {
+  margin: 0 15px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 8px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+nav a:hover {
+  background-color: rgba(162, 166, 128, 0.871);
+}
+
+.title{
+font-size: 25px; 
+font-style: italic; 
+color: rgb(146, 62, 2);}
+
+.table-title{
+  font-size: 40px;
+  background-color: rgb(177, 250, 226);
+  font-style: italic;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: bold;
+  color: rgb(209, 130, 3);
+}
+initial-sum.title {
+  background-color: #ffebee; /* светлый красный фон для заголовка */
+}
+
+.expenses.title {
+  background-color: #fffde7; /* светлый желтый фон для заголовка */
+}
+
+.balance.title {
+  background-color: #e8f5e8; /* светлый зеленый фон для заголовка */
+}
+
+/* Стили для ячеек с данными */
+.initial-sum {
+  color: #d32f2f !important; /* красный цвет */
+  font-weight: bold;
+  background-color: #ffebee; /* светлый красный фон */
+}
+
+.expenses {
+  color: #f57c00 !important; /* оранжево-желтый цвет */
+  font-weight: bold;
+  background-color: #fffde7; /* светлый желтый фон */
+}
+
+.balance {
+  color: #388e3c !important; /* зеленый цвет */
+  font-weight: bold;
+  background-color: #e8f5e8; /* светлый зеленый фон */
+}
